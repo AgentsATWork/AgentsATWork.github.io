@@ -1,6 +1,10 @@
 baseURL = "https://agentsatwork.github.io/"
 title = "Ann Naser Nabil"
 languageCode = "en"
+publishDir = "."
+disablePathToLower = true
+relativeURLs = false
+canonicalURL = "https://agentsatwork.github.io/"
 
  
 [markup.goldmark.renderer]
