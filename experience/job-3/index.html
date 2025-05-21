@@ -9,7 +9,7 @@
 
 <title>
   
-    Satirist |
+    Creative Writer |
   
   Ann Naser Nabil
 </title>
@@ -38,132 +38,261 @@
       crossorigin="anonymous" />
 
 
- <script>
-    (function () {
+
+  
+  <script>
+    
+    (function() {
       const storedTheme = localStorage.getItem('theme');
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      if (storedTheme === 'auto' || !storedTheme) {
-        document.documentElement.setAttribute('data-bs-theme', prefersDark ? 'dark' : 'light');
-        document.documentElement.setAttribute('data-theme-auto', 'true');
+      if (storedTheme) {
+        if (storedTheme === 'auto') {
+          const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          document.documentElement.setAttribute('data-bs-theme', isDark ? 'dark' : 'light');
+          document.documentElement.setAttribute('data-theme-auto', 'true');
+        } else {
+          document.documentElement.setAttribute('data-bs-theme', storedTheme);
+        }
       } else {
-        document.documentElement.setAttribute('data-bs-theme', storedTheme);
+        const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.setAttribute('data-bs-theme', isDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme-auto', 'true');
       }
     })();
   </script>
-
   <script defer src="http://localhost:1313/js/color-modes.js"></script>
-  <script src="http://localhost:1313/js/library/lozad.min.js"></script>
+  
+<script src="http://localhost:1313/js/library/lozad.min.js"></script>
 
-  <meta property="og:url" content="http://localhost:1313/experience/job-3/" />
-  <meta property="og:site_name" content="Adritian - a high performance hugo theme by Adrián Moreno" />
-  <meta property="og:title" content="Job #3" />
-  <meta property="og:description" content="As Chief Information Officer at Internet Affairs Inc., I led strategic digital transformation initiatives..." />
-  <meta property="og:locale" content="en" />
-  <meta property="og:type" content="article" />
-  <meta property="article:section" content="experience" />
-  <meta property="article:published_time" content="2024-12-01T00:00:00+01:00" />
-  <meta property="article:modified_time" content="2024-12-01T00:00:00+01:00" />
-  <meta property="og:image" content="http://localhost:1313/img/og-img.png" />
+<meta property="og:url" content="http://localhost:1313/experience/job-3.es-copy/">
+  <meta property="og:site_name" content="Adritian - a high performance hugo theme by Adrián Moreno">
+  <meta property="og:title" content="Trabajo #3">
+  <meta property="og:description" content="Arreglando el mundo, un byte a la vez ¡Adquisición hostil - ¿quién es el jefe ahora?!">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="experience">
+    <meta property="article:published_time" content="2024-01-01T00:00:00+01:00">
+    <meta property="article:modified_time" content="2024-01-01T00:00:00+01:00">
+    <meta property="og:image" content="http://localhost:1313/img/og-img.png">
+
+
+    
+
 </head>
 
-<body class="page-job-3">
-  <a href="#main-content" class="skip-to-content-link" aria-label="Skip to main content">Skip to main content</a>
+<body class=" page-job-3.es copy">
+    
 
-  <header class="header fixed-top rad-animation-group" id="header">
-    <div class="container rad-fade-in">
-      <nav class="navbar navbar-expand-lg navbar-light p-0">
-        <div class="container-fluid">
-          <a class="navbar-brand mx-auto" href="/">
-            <span>Ann Naser</span> <span>Nabil</span>
-          </a>
-          <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item"><a class="nav-link" href="/">HOME</a></li>
-              <li class="nav-item"><a class="nav-link" href="/#about">ABOUT</a></li>
-              <li class="nav-item"><a class="nav-link" href="/#portfolio">PORTFOLIO</a></li>
-              <li class="nav-item"><a class="nav-link" href="/blog">BLOG</a></li>
-              <li class="nav-item"><a class="nav-link" href="/#contact"><i class="icon-email" aria-label="email"></i></a></li>
-              <li class="nav-item"><a class="nav-link" href="/search"><i class="icon-search" aria-label="Search"></i></a></li>
 
-              <!-- Language Selector -->
-              <li class="nav-item dropdown language-selector">
-                <div class="dropdown">
-                  <button class="btn btn-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                    Language
-                  </button>
-                  <ul class="dropdown-menu dropdown-menu-end">
-                    <li class="dropdown-item current selected"><span>✔️ English</span></li>
-                    <li class="dropdown-item"><a href="http://localhost:1313/es/experience/job-3/">Español</a></li>
-                    <li class="dropdown-item"><a href="http://localhost:1313/fr/experience/job-3/">Français</a></li>
-                  </ul>
-                </div>
-              </li>
+<a href="#main-content" 
+    class="skip-to-content-link"
+    aria-label='Skip to main content'>
+  Skip to main content
+</a>
 
-              <!-- Theme Selector -->
-              <li class="nav-item dropdown theme-selector">
-                <div class="dropdown">
-                  <button class="btn btn-link dropdown-toggle" id="theme-toggle" data-bs-toggle="dropdown">
-                    ✨ Auto
-                  </button>
-                  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="theme-toggle">
-                    <li><button class="dropdown-item" data-bs-theme-value="light">☀️ Light</button></li>
-                    <li><button class="dropdown-item" data-bs-theme-value="dark">🌑 Dark</button></li>
-                    <li><button class="dropdown-item" data-bs-theme-value="auto">✨ Auto</button></li>
-                  </ul>
-                </div>
-              </li>
-            </ul>
-          </div>
+<header class="header fixed-top rad-animation-group" id="header">
+  <div class="container rad-fade-in">
+    <nav class="navbar bd-navbar navbar-expand-lg navbar-light p-0">
+      <div class="container-fluid">
+        <a class="navbar-brand mx-auto" href="/">
+            
+          <span>Ann Naser</span>
+          <span>Nabil</span>
+        </a>
+        <button
+          class="navbar-toggler collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent, #header"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label='Toggle navigation'
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-lg-auto">
+            <li class="nav-item">
+              <a data-scroll class="nav-link" href="/"
+                >
+                  HOME
+                </a
+              >
+            </li>
+            <li class="nav-item">
+              <a data-scroll class="nav-link" href="/#about"
+                >
+                  ABOUT
+                </a
+              >
+            </li>
+            <li class="nav-item">
+              <a data-scroll class="nav-link" href="/#portfolio"
+                >
+                  PORTFOLIO
+                </a
+              >
+            </li>
+            <li class="nav-item">
+              <a data-scroll class="nav-link" href="/blog"
+                >
+                  BLOG
+                </a
+              >
+            </li>
+            <li class="nav-item">
+              <a data-scroll class="nav-link" href="/#contact"
+                >
+                  <i class="icon-email" aria-label="email"></i>
+                </a
+              >
+            </li>
+            <li class="nav-item">
+              <a data-scroll class="nav-link" href="/search"
+                >
+                  <i class="icon-search" aria-label="Search"></i>
+                </a
+              >
+            </li>
+            
+                     
+            <li class="dropdown language-selector nav-item">
+            
+<div id='header-language-selector'
+  class='d-grid gap-2 col-6 mx-auto nav-link dropdown  '>
+  
+  
+  <button class="btn btn-link py-2 px-0 px-lg-2 dropdown-toggle d-flex align-items-center show"
+    id='btn-select-language-header' type="button" aria-expanded="true"
+    aria-controls="languages-dropdown-header" data-bs-toggle="dropdown" data-bs-display="static"
+    aria-label='Language'>
+    <span class="label">Language</span>
+  </button>
+  <ul class='dropdown-menu dropdown-menu-end '
+    id="languages-dropdown-header" data-bs-popper="static">
+    <li class="dropdown-item current selected">
+      <span>✔️ English</span>
+    </li>
+    
+    
+  
+    
+  
+    
+    
+  </ul>
+</div>
+            </li>
+            <li class="dropdown theme-selector nav-item">
+              
+                
+              
+<div id='header-color-selector'
+  class='d-grid gap-2 col-6 mx-auto nav-link dropdown  '>
+  <button class="btn btn-link py-2 px-0 px-lg-2 dropdown-toggle d-flex align-items-center show bd-theme-selector"
+    id='bd-theme-header' type="button" aria-expanded="true" data-bs-toggle="dropdown"
+    data-bs-display="static" aria-label='Toggle theme'>
+    <span class="theme-icon auto d-none" aria-hidden="true"></span>
+    <span class="current-theme">✨ Auto</span>
+    <span class="d-lg-none ms-2 visually-hidden bd-theme-text" id="bd-theme-text-header">Toggle theme</span>
+  </button>
+  <ul id="theme-dropdown-header" class="dropdown-menu dropdown-menu-end " aria-labelledby="bd-theme-text-header" data-bs-popper="static">
+    <li>
+      <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="light"
+        aria-pressed="true">
+        ☀️ Light
+      </button>
+    </li>
+    <li>
+      <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark"
+        aria-pressed="false">
+        🌑 Dark
+        <span class="theme-icon dark d-none" aria-hidden="true"></span>
+      </button>
+    </li>
+    <li>
+      <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto"
+        aria-pressed="false">
+        ✨ Auto
+        <span class="theme-icon light d-none" aria-hidden="true"></span>
+      </button>
+    </li>
+  </ul>
+</div>
+            </li>
+          </ul>
         </div>
-      </nav>
-    </div>
-  </header>
 
-  <!-- Breadcrumbs -->
-  <section class="breadcrumb-bar container" id="breadcrumb-bar">
-    <ul class="breadcrumbs d-print-none">
-      <li><a href="/">Home</a></li>
-      <li><a href="/experience">Experience</a></li>
-      <li class="current">Job #3</li>
-    </ul>
-  </section>
-
-  <main class="container" id="main-content">
-    <section class="section section--border-bottom rad-animation-group flex-grow-1" id="experience">
-      <div class="row flex-column-reverse flex-md-row rad-fade-down">
-        <!-- Sidebar with Experience -->
-        <div class="col-12 col-md-5 mt-5">
-          <div class="experience selected">
-            <a href="/experience/job-3/">
-              <div class="experience__header with-company-logo">
-                <img src="/images/experience/earki.png" alt="Earki logo" class="experience__company-logo" loading="lazy">
-              </div>
-              <div class="experience__meta">
-                <div class="experience__date">2017–now</div>
-                <div class="experience__title">Creative Writer</div>
-                <div class="experience__company">Earki <span class="experience__location">Dhaka, Bangladesh</span></div>
-              </div>
-            </a>
-          </div>
-        </div>
-
-        <!-- Main Content -->
-        <div class="col-12 col-md-7 mt-7">
-          <h1>Satirist</h1>
-          <h2>Creative Writer : Earki</h2>
-          <p>
-            As a satire writer at Earki, Bangladesh’s leading online satire platform, I crafted humorous and thought-provoking content blending current events, social commentary, and pop culture.
-            My work involved developing original ideas, writing sharp and witty pieces, and collaborating with editors to ensure the tone matched Earki’s unique voice.
-            Through this role, I honed my skills in comedic timing, cultural critique, and impactful storytelling that resonated with a wide digital audience.
-          </p>
-        </div>
       </div>
-    </section>
-  </main>
+    </nav>
+  </div>
+</header> 
+  <section id="breadcrumb-bar" class="breadcrumb-bar container">
+    <ul class="breadcrumbs d-print-none">
+        <li class="breadcrum-item"><span><a href="/">Home</a></span></li><li class="breadcrum-item"><span><a href="/experience">Experience</a></span></li><li class="breadcrum-item current">Creative Writer/li></ul>
+</section>
+
+
+    <main class="container">
+        
+<section
+  id="experience"
+  class="section section--border-bottom rad-animation-group flex-grow-1"
+>
+  <div id="main-content">
+    <div class="row flex-column-reverse flex-md-row rad-fade-down">
+      <div class="col-12 col-md-5 mt-5 mt-sm-0">
+        
+        
+        
+        
+           
+         
+         
+        <div class="experience " >
+          <a href="/experience/job-1/">
+            
+            
+            
+              
+            <div class="experience__header  with-company-logo">
+              <img
+                src="/images/experience/earki.png"
+                alt=" logo"
+                class="experience__company-logo"
+                loading="lazy"
+              >
+              
+            
+            </div>
+          </a>
+        </div>
+        
+      </div>
+      <div class="col-12 col-md-7 mt-7 mt-sm-0">
+        
+        <div class="job-card mb-5">
+          
+          
+            <div class="no-company-logo d-flex align-items-center mb-3">
+            
+            <div>
+              <h2 class="h4 mb-1">Creative Writer</h2>
+              <div class="job-card__location text-muted">Earki • Dhaka, Bangladesh</div>
+              <div class="job-card__dates text-muted">2017-now</div>
+            </div>
+          </div>
+        </div>
+        
+        <h1>What I Write</h1>
+
+<p>As a satire writer at Earki, Bangladesh’s leading online satire platform, I crafted humorous and thought-provoking content that blended current events, social commentary, and pop culture. My work involved developing original ideas, writing sharp and witty pieces, and collaborating with editors to ensure the tone matched Earki’s unique voice. Through this role, I honed my skills in comedic timing, cultural critique, and creative storytelling—engaging a wide audience while pushing the boundaries of satire in Bengali digital media.</p>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+            
+    
 </body>
 </html>
