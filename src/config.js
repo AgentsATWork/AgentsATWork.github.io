@@ -41,6 +41,10 @@ module.exports = {
       name: 'Contact',
       url: '/#contact',
     },
+    {
+      name:'Blog',
+      url:'http://ubermensch.is-a.dev/blog/'
+    },
      {
       name: 'Find Me On',
       url: 'https://bit.ly/m/Ubermensch',
