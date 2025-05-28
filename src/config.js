@@ -41,8 +41,13 @@ module.exports = {
       name: 'Contact',
       url: '/#contact',
     },
+     {
+      name: 'Find Me On',
+      url: 'https://bit.ly/m/Ubermensch',
+    },
   ],
 
+  
   colors: {
     green: '#64ffda',
     navy: '#0a192f',
